@@ -1,0 +1,8 @@
+# From Automate the Boring Stuff with Python Programming, Created by Al Sweigart
+# Using if statements 
+
+name='Alice'
+if name=='Alice':
+    print('Hi Alice')
+print('Done.')
+

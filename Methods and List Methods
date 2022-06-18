@@ -1,0 +1,67 @@
+#From Automate the Boring Stuff with Python Programming by Al Sweigart
+#Methods, and the List Methods: index(), append(), insert(), remove(), sort()
+
+spam = ['hello', 'hi', 'howdy', 'heyas']
+spam.index('hello')
+0
+#call the method on a value
+spam.index('heyas')
+3
+spam.index('forijorijoeijrgoeroijg')
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    spam.index('forijorijoeijrgoeroijg')
+ValueError: 'forijorijoeijrgoeroijg' is not in list
+spam = ['Zophie','Pooka','Fat-Tail','Pooka']
+spam.index('Pooka')
+1
+#if duplicates are in a list, the index method will return the first time it sees that value
+
+#append() and insert() to add new values
+spam = ['cat','dog','rat']
+spam.append('moose')
+spam
+['cat', 'dog', 'rat', 'moose']
+#append adds the value to the end
+
+spam = ['cat','dog','rat']
+spam.insert(1,'chicken')
+spam
+['cat', 'chicken', 'dog', 'rat']
+#append() and insert() are list methods and can only be called on list values
+spam = ['cat','bat','rat', 'elephant']
+spam.remove('bat')
+spam
+['cat', 'rat', 'elephant']
+#the remove() function will remove the first value it sees in the list
+del spam[0]
+spam
+['rat', 'elephant']
+# del function removes a value by its index position
+spam = [2,5,3.14,1,-7]
+spam.sort()
+spam
+[-7, 1, 2, 3.14, 5]
+#sort method rearranges items to be in order
+spam = ['ants','cats','dogs', 'badgers', 'elephants']
+spam.sort()
+spam
+['ants', 'badgers', 'cats', 'dogs', 'elephants']
+spam.sort(reverse=True)
+spam
+['elephants', 'dogs', 'cats', 'badgers', 'ants']
+#reverse=True makes the list sort values in reverse order
+#you cannot sort str and int lists
+#ASCII-betial order means uppercase characters come before lowercase
+spam = ['Alice','Bob','ants', 'badgers', 'Carol', 'cats']
+spam.sort()
+spam
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+#to fix this:
+spam = ['A','Z','a', 'z']
+spam.sort()
+spam
+['A', 'Z', 'a', 'z']
+spam.sort(key=str.lower)
+spam
+['A', 'a', 'Z', 'z']

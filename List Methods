@@ -1,0 +1,78 @@
+# From Automate the Boring Stuff with Python Programming, Created by Al Sweigart
+#Methods, and the List Methods:
+#index(), append(), insert(), remove(), sort()
+
+spam =  ['hello', 'hi', 'howdy', 'heyas']
+spam.index('hello')
+0
+
+#Methods are the same as functions, but methods are called on certain values 
+#The index() List Method 
+#method comes after the list value/variable that contains value
+
+spam.index('heyas')
+3
+spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
+spam.index('Pooka')
+1
+
+#if there are duplicate items in the list, the index function will output the first one
+
+#Append method adds a value to the end of the list
+
+spam = ['cat', 'dog', 'bat']
+spam.append('moose')
+spam ['cat', 'dog', 'bat', 'moose']
+
+#insert lets you put the value at a specific location in the list
+
+spam = ['cat', 'dog', 'bat']
+spam.insert(1, 'chicken')
+spam ['cat', 'chicken', 'dog', 'bat']
+
+#remove() List Method specifics value. del removes index
+
+spam = ['cat', 'rat', 'bat', 'elephant']
+spam.remove('bat')
+spam
+['cat', 'rat', 'elephant']
+
+del spam[0]
+spam
+['rat', 'elephant']
+
+#remove method removes only the first instance of a value, other remain
+
+spam = ['cat', 'rat', 'bat', 'elephant', 'cat']
+spam.remove('cat')
+spam 
+['rat', 'bat', 'elephant', 'cat']
+
+#sort() List Method
+
+spam = [2, 5, 3.14, 1, -7]
+spam.sort()
+spam
+[-7, 1, 2, 3.14, 5]
+
+spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+spam.sort()
+['ants', 'badgers', 'cats', 'dogs', 'elephants']
+spam.sort(reverse=True)
+spam
+['elephants', 'dogs', 'cats', 'badgers', 'ants']
+
+#cannot sort strings and numbers together
+#sort uses ASCII-betical Order, uppercase come before lowercase letters
+
+spam = ['Alice', 'Bob', 'ants', 'badgers', 'Carol', 'cats']
+spam.sort()
+spam
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+
+spam = ['a', 'z', 'A', 'Z']
+spam.sort()
+spam
+['A', 'Z', 'a', 'z']
+spam.sort(key=str.lower)
+['A', 'a', 'Z', 'z']
